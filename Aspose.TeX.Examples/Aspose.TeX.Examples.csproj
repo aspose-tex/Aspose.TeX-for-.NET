@@ -46,11 +46,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="CustomTeXFormatFileCreation\CustomTeXFormatFileCreation.cs" />
+    <Compile Include="OverridenJobNameAndTerminalOutputWrittenToZip\OverridenJobNameAndTerminalOutputWrittenToZip.cs" />
+    <Compile Include="StreamInputImageOutputAndTerminalInput\StreamInputImageOutputAndTerminalInput.cs" />
+    <Compile Include="TypesetPdfWrittenToExternalStream\TypesetPdfWrittenToExternalStream.cs" />
+    <Compile Include="TypesetWithCustomTeXFormat\TypesetWithCustomTeXFormat.cs" />
+    <Compile Include="TypesetXpsWrittenToExternalStream\TypesetXpsWrittenToExternalStream.cs" />
+    <Compile Include="FileSystemInputOutputAndXpsOutput\FileSystemInputOutputAndXpsOutput.cs" />
+    <Compile Include="OverridenJobNameAndTerminalOutputWrittenToDisc\OverridenJobNameAndTerminalOutputWrittenToDisc.cs" />
+    <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZipFileInputOuputAndPdfOutput\ZipFileInputOuputAndPdfOutput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
