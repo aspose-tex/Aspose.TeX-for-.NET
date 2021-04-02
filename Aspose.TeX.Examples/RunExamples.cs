@@ -23,7 +23,7 @@ namespace Aspose.TeX.Examples.CSharp
             Console.WriteLine("=====================================================");
 
             //// Instantiate an instance of license and set the license file through its path
-            new License().SetLicense(Path.GetFullPath(Path.Combine(BasePath, "License\\Aspose.TeX.NET.lic")));
+            //new License().SetLicense(Path.GetFullPath(Path.Combine(BasePath, "License\\Aspose.TeX.NET.lic")));
 
             // Uncomment the example that you want to run.
 
@@ -32,6 +32,10 @@ namespace Aspose.TeX.Examples.CSharp
             ////  Typeset a TeX file 
             //// =====================================================
             //// =====================================================
+
+            //LoadLicenseFromFile.Run();
+
+            //LoadLicenseFromStream.Run();
 
             //FileSystemInputOutputAndXpsOutput.Run();
 
