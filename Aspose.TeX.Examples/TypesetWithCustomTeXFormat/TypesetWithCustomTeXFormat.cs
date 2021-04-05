@@ -17,21 +17,23 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Create a file system input working directory.
             IWorkingDirectory wd = new InputFileSystemDirectory(RunExamples.OutputDirectory);
             // Create a format provider.
-            FormatProvider formatProvider = new FormatProvider(wd, "customtex");
-            // Create typesetting options for a custom format on ObjectTeX engine extension.
-            TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX(formatProvider));
-            options.JobName = "typeset-with-custom-format";
-            // Specify the input working directory.
-            options.InputWorkingDirectory = wd;
-            // Specify a file system working directory for output.
-            options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
+            using (FormatProvider formatProvider = new FormatProvider(wd, "customtex"))
+            {
+                // Create typesetting options for a custom format on ObjectTeX engine extension.
+                TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX(formatProvider));
+                options.JobName = "typeset-with-custom-format";
+                // Specify the input working directory.
+                options.InputWorkingDirectory = wd;
+                // Specify a file system working directory for output.
+                options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
 
-            // Run typesetting.
-            TeX.Typeset(new MemoryStream(Encoding.ASCII.GetBytes(
-                    "Congratulations! You have successfully typeset this text with your own TeX format!\\end")), new XpsDevice(), options);
+                // Run typesetting.
+                TeX.Typeset(new MemoryStream(Encoding.ASCII.GetBytes(
+                        "Congratulations! You have successfully typeset this text with your own TeX format!\\end")), new XpsDevice(), options);
 
-            // For further output to look write.
-            options.TerminalOut.Writer.WriteLine();
+                // For further output to look write.
+                options.TerminalOut.Writer.WriteLine();
+            }
             // ExEnd:TypesetWithCustomTeXFormat
         }
     }
