@@ -6,7 +6,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
     /// <summary>
     /// Using file system directories for input and output, outputting to XPS device, overriding the job name, writing terminal output to disk.
     /// </summary>
-    class OverridenJobNameAndTerminalOutputWrittenToDisc
+    class OverridenJobNameAndTerminalOutputWrittenToDisk
     {
         public static void Run()
         {

@@ -55,7 +55,7 @@
     <Compile Include="TypesetWithCustomTeXFormat\TypesetWithCustomTeXFormat.cs" />
     <Compile Include="TypesetXpsWrittenToExternalStream\TypesetXpsWrittenToExternalStream.cs" />
     <Compile Include="FileSystemInputOutputAndXpsOutput\FileSystemInputOutputAndXpsOutput.cs" />
-    <Compile Include="OverridenJobNameAndTerminalOutputWrittenToDisc\OverridenJobNameAndTerminalOutputWrittenToDisc.cs" />
+    <Compile Include="OverridenJobNameAndTerminalOutputWrittenToDisk\OverridenJobNameAndTerminalOutputWrittenToDisk.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ZipFileInputOuputAndPdfOutput\ZipFileInputOuputAndPdfOutput.cs" />

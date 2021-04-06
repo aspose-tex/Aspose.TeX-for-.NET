@@ -39,7 +39,7 @@ namespace Aspose.TeX.Examples.CSharp
 
             //FileSystemInputOutputAndXpsOutput.Run();
 
-            //OverridenJobNameAndTerminalOutputWrittenToDisc.Run();
+            //OverridenJobNameAndTerminalOutputWrittenToDisk.Run();
 
             //TypesetXpsWrittenToExternalStream.Run();
 
