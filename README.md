@@ -1,6 +1,6 @@
 # .NET API to TypeSet TeX Files
 
-[![Nuget](https://img.shields.io/nuget/v/Aspose.Tasks)](https://www.nuget.org/packages/Aspose.TeX/) ![Nuget](https://img.shields.io/nuget/dt/Aspose.Tasks)
+[![Nuget](https://img.shields.io/nuget/v/Aspose.Tex)](https://www.nuget.org/packages/Aspose.TeX/) ![Nuget](https://img.shields.io/nuget/dt/Aspose.Tex)
 
 [Home](https://www.aspose.com/) | [Product Page](https://products.aspose.com/tex/net) | [Docs](https://docs.aspose.com/tex/net/) | [Demos](https://products.aspose.app/tex/family) | [API Reference](https://apireference.aspose.com/tex/net) | [Examples](https://github.com/aspose-tex/Aspose.tex-for-.NET) | [Blog](https://blog.aspose.com/category/tex/) | [Free Support](https://forum.aspose.com/c/tex) |  [Temporary License](https://purchase.aspose.com/temporary-license)
 
