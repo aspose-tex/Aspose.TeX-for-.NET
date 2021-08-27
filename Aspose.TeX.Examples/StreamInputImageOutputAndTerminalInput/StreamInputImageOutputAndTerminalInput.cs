@@ -32,9 +32,10 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Create image device.
             ImageDevice device = new ImageDevice();
             // Run typesetting.
-            TeX.Typeset(new MemoryStream(Encoding.ASCII.GetBytes(
+            TeXJob job = new TeXJob(new MemoryStream(Encoding.ASCII.GetBytes(
                     "\\hrule height 10pt width 95pt\\vskip10pt\\hrule height 5pt")),
                     device, options);
+            job.Run();
 
             // When console prompts the input, type "ABC", press Enter, then type "\end" and press Enter again.
 

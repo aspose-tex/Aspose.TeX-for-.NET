@@ -1,13 +1,6 @@
-﻿using Aspose.TeX;
-using Aspose.TeX.Examples.CSharp.TeXTypesetting;
-using Aspose.TeX.IO;
-using Aspose.TeX.Presentation.Image;
-using Aspose.TeX.Presentation.Pdf;
-using Aspose.TeX.Presentation.Xps;
-using Aspose.TeX.ResourceProviders;
+﻿using Aspose.TeX.Examples.CSharp.TeXTypesetting;
 using System;
 using System.IO;
-using System.Text;
 
 namespace Aspose.TeX.Examples.CSharp
 {
@@ -23,7 +16,7 @@ namespace Aspose.TeX.Examples.CSharp
             Console.WriteLine("=====================================================");
 
             //// Instantiate an instance of license and set the license file through its path
-            //new License().SetLicense(Path.GetFullPath(Path.Combine(BasePath, "License\\Aspose.TeX.NET.lic")));
+            new License().SetLicense(Path.GetFullPath(Path.Combine(BasePath, "License\\Aspose.TeX.NET.lic")));
 
             // Uncomment the example that you want to run.
 
@@ -53,7 +46,7 @@ namespace Aspose.TeX.Examples.CSharp
 
             //CustomTeXFormatFileCreation.Run();
 
-            //TypesetWithCustomTeXFormat.Run();
+            TypesetWithCustomTeXFormat.Run();
         }
     }
 }

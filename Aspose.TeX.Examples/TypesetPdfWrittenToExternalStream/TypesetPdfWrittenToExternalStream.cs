@@ -36,7 +36,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
                 using (Stream stream = File.Open(Path.Combine(RunExamples.OutputDirectory, "file-name.pdf"), FileMode.Create)) // writing PDF somewhere else
                 // 2) A file in the output ZIP. A wierd feature that extends flexibilty :)
                 //using (Stream stream = options.OutputWorkingDirectory.GetFile("file-name.pdf", out string fullName)) // writing PDF to the same ZIP
-                    TeX.Typeset("hello-world", new PdfDevice(stream), options);
+                new TeXJob("hello-world", new PdfDevice(stream), options).Run();
 
                 // Finalize output ZIP archive.
                 ((OutputZipDirectory)options.OutputWorkingDirectory).Finish();

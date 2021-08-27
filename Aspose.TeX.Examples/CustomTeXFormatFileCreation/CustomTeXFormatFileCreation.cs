@@ -18,7 +18,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
 
             // Run format creation.
-            TeX.CreateFormat("customtex", options);
+            TeXJob.CreateFormat("customtex", options);
 
             // For further output to look write.
             options.TerminalOut.Writer.WriteLine();

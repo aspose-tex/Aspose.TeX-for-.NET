@@ -32,7 +32,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
                 // Create and specify saving options.
                 options.SaveOptions = new PdfSaveOptions();
                 // Run typesetting.
-                TeX.Typeset("hello-world", new PdfDevice(), options);
+                new TeXJob("hello-world", new PdfDevice(), options).Run();
 
                 // Finalize output ZIP archive.
                 ((OutputZipDirectory)options.OutputWorkingDirectory).Finish();

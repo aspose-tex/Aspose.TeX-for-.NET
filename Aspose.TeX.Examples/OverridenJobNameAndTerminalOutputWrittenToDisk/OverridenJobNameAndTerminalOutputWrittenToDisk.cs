@@ -24,7 +24,8 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             options.TerminalOut = new OutputFileTerminal(options.OutputWorkingDirectory);
 
             // Run typesetting.
-            TeX.Typeset("hello-world", new XpsDevice(), options);
+            TeXJob job = new TeXJob("hello-world", new XpsDevice(), options);
+            job.Run();
             // ExEnd:OverrideJobName-WriteTerminalOutputToFileSystem
         }
     }

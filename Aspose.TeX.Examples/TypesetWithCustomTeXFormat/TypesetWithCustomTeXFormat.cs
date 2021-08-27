@@ -15,7 +15,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         {
             // ExStart:TypesetWithCustomTeXFormat
             // Create a file system input working directory.
-            IWorkingDirectory wd = new InputFileSystemDirectory(RunExamples.OutputDirectory);
+            IInputWorkingDirectory wd = new InputFileSystemDirectory(RunExamples.OutputDirectory);
             // Create a format provider.
             using (FormatProvider formatProvider = new FormatProvider(wd, "customtex"))
             {
@@ -28,8 +28,9 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
                 options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
 
                 // Run typesetting.
-                TeX.Typeset(new MemoryStream(Encoding.ASCII.GetBytes(
-                        "Congratulations! You have successfully typeset this text with your own TeX format!\\end")), new XpsDevice(), options);
+                new TeXJob(new MemoryStream(Encoding.ASCII.GetBytes(
+                        "Congratulations! You have successfully typeset this text with your own TeX format!\\end")),
+                        new XpsDevice(), options).Run();
 
                 // For further output to look write.
                 options.TerminalOut.Writer.WriteLine();

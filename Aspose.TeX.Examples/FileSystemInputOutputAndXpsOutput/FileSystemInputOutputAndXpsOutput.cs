@@ -22,7 +22,8 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Specify memory stream as output terminal, if you don't terminal output to be written to console.
             //options.TerminalOut = new OutputMemoryTerminal();
             // Run typesetting.
-            TeX.Typeset("hello-world", new XpsDevice(), options);
+            TeXJob job = new TeXJob("hello-world", new XpsDevice(), options);
+            job.Run();
 
             // For further output to look write.
             options.TerminalOut.Writer.WriteLine(); // The same as Console.Out.WriteLine();
