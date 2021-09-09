@@ -11,15 +11,15 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:TakeInputFromFileSystem-WriteOutputToFileSystem-WriteTerminalOutputToConsole
-            // Create typesetting options for default ObjectTeX format on ObjectTeX engine extension.
+            // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
-            // Specify a file system working directory for input.
+            // Specify a file system working directory for the input.
             options.InputWorkingDirectory = new InputFileSystemDirectory(RunExamples.InputDirectory);
-            // Specify a file system working directory for output.
+            // Specify a file system working directory for the output.
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
             // Specify console as output terminal.
             options.TerminalOut = new OutputConsoleTerminal(); // Default. No need to specify.
-            // Specify memory stream as output terminal, if you don't terminal output to be written to console.
+            // Specify a memory stream as output terminal, if you don't want the terminal output to be written to the console.
             //options.TerminalOut = new OutputMemoryTerminal();
             // Run typesetting.
             TeXJob job = new TeXJob("hello-world", new XpsDevice(), options);

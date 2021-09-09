@@ -11,19 +11,19 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:OverrideJobName-WriteTerminalOutputToFileSystem
-            // Create typesetting options for default ObjectTeX format on ObjectTeX engine extension.
+            // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
             // Specify the job name. Otherwise, TeX.Typeset()'s method first argument will be taken as a job name.
             options.JobName = "overriden-job-name";
-            // Specify a file system working directory for input.
+            // Specify a file system working directory for the input.
             options.InputWorkingDirectory = new InputFileSystemDirectory(RunExamples.InputDirectory);
-            // Specify a file system working directory for output.
+            // Specify a file system working directory for the output.
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
             // Specify that the terminal output must be written to a file in the output working directory.
             // The file name is <job_name>.trm.
             options.TerminalOut = new OutputFileTerminal(options.OutputWorkingDirectory);
 
-            // Run typesetting.
+            // Run the job.
             TeXJob job = new TeXJob("hello-world", new XpsDevice(), options);
             job.Run();
             // ExEnd:OverrideJobName-WriteTerminalOutputToFileSystem

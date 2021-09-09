@@ -12,11 +12,11 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:LoadLicenseFromStream
-            // Initialize license object
+            // Initialize license object.
             License license = new License();
-            // Load license in FileStream
+            // Load license in FileStream.
             FileStream myStream = new FileStream("D:\\Aspose.Total.NET.lic", FileMode.Open);
-            // Set license
+            // Set license.
             license.SetLicense(myStream);
             Console.WriteLine("License set successfully.");
             // ExEnd:LoadLicenseFromStream

@@ -14,30 +14,30 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:TakeMainInputFromStream-AuxFromFileSystem-TakeTerminalInputFromConsole-AlternativeImagesStorage
-            // Create typesetting options for default ObjectTeX format on ObjectTeX engine extension.
+            // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
             // Specify the job name.
             options.JobName = "stream-in-image-out";
-            // Specify a file system working directory for input.
+            // Specify a file system working directory for the input.
             options.InputWorkingDirectory = new InputFileSystemDirectory(RunExamples.InputDirectory);
-            // Specify a file system working directory for output.
+            // Specify a file system working directory for the output.
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
-            // Specify console as input terminal.
+            // Specify the console as the input terminal.
             options.TerminalIn = new InputConsoleTerminal();  // Default. No need to specify.
-            // Specify console as output terminal.
+            // Specify the console as the input terminal.
             options.TerminalOut = new OutputConsoleTerminal(); // Default. No need to specify.
 
-            // Create and specify saving options.
+            // Define the saving options.
             options.SaveOptions = new PngSaveOptions() { Resolution = 300 };
-            // Create image device.
+            // Create the image device.
             ImageDevice device = new ImageDevice();
-            // Run typesetting.
+            // Run the job.
             TeXJob job = new TeXJob(new MemoryStream(Encoding.ASCII.GetBytes(
                     "\\hrule height 10pt width 95pt\\vskip10pt\\hrule height 5pt")),
                     device, options);
             job.Run();
 
-            // When console prompts the input, type "ABC", press Enter, then type "\end" and press Enter again.
+            // When the console prompts the input, type "ABC", press Enter, then type "\end" and press Enter again.
 
             // For further output to look write. 
             options.TerminalOut.Writer.WriteLine();

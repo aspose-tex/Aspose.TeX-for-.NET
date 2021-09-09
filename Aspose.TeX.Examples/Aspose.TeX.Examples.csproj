@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaTeXXpsConversionAlternative\LaTeXXpsConversionAlternative.cs" />
+    <Compile Include="LaTeXPdfConversionAlternative\LaTeXPdfConversionAlternative.cs" />
+    <Compile Include="LaTeXXpsConversionSimplest\LaTeXXpsConversionSimplest.cs" />
+    <Compile Include="LaTeXPdfConversionSimplest\LaTeXPdfConversionSimplest.cs" />
+    <Compile Include="LaTeXPngConversionAlternative\LaTeXPngConversionAlternative.cs" />
+    <Compile Include="LaTeXPngConversionSimplest\LaTeXPngConversionSimplest.cs" />
     <Compile Include="CustomTeXFormatFileCreation\CustomTeXFormatFileCreation.cs" />
     <Compile Include="LoadLicenseFromFile\LoadLicenseFromFile.cs" />
     <Compile Include="LoadLicenseFromStream\LoadLicenseFromStream.cs" />

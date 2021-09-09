@@ -17,21 +17,21 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Open a stream on a ZIP archive that will serve as the output working directory.
             using (Stream outZipStream = File.Open(Path.Combine(RunExamples.OutputDirectory, "terminal-out-to-zip.zip"), FileMode.Create))
             {
-                // Create typesetting options for default ObjectTeX format on ObjectTeX engine extension.
+                // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
                 TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
                 // Specify the job name.
                 options.JobName = "terminal-output-to-zip";
-                // Specify a ZIP archive working directory for input.
+                // Specify a ZIP archive working directory for the input.
                 options.InputWorkingDirectory = new InputZipDirectory(inZipStream, "in");
-                // Specify a ZIP archive working directory for output.
+                // Specify a ZIP archive working directory for the output.
                 options.OutputWorkingDirectory = new OutputZipDirectory(outZipStream);
                 // Specify that the terminal output must be written to a file in the output working directory.
                 // The file name is <job_name>.trm.
                 options.TerminalOut = new OutputFileTerminal(options.OutputWorkingDirectory);
 
-                // Create and specify saving options.
+                // Define the saving options.
                 options.SaveOptions = new PdfSaveOptions();
-                // Run typesetting.
+                // Run the job.
                 new TeXJob("hello-world", new PdfDevice(), options).Run();
 
                 // Finalize output ZIP archive.

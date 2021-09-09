@@ -46,7 +46,18 @@ namespace Aspose.TeX.Examples.CSharp
 
             //CustomTeXFormatFileCreation.Run();
 
-            TypesetWithCustomTeXFormat.Run();
+            //TypesetWithCustomTeXFormat.Run();
+
+            // ======================================
+
+            //LaTeXPngConversionSimplest.Run();
+            //LaTeXPngConversionAlternative.Run();
+
+            //LaTeXPdfConversionSimplest.Run();
+            //LaTeXPdfConversionAlternative.Run();
+
+            LaTeXXpsConversionSimplest.Run();
+            //LaTeXXpsConversionAlternative.Run();
         }
     }
 }
