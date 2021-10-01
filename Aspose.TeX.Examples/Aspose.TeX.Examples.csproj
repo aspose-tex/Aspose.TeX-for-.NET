@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaTeXMathRenderer\LaTeXMathRenderer.cs" />
     <Compile Include="LaTeXXpsConversionAlternative\LaTeXXpsConversionAlternative.cs" />
     <Compile Include="LaTeXPdfConversionAlternative\LaTeXPdfConversionAlternative.cs" />
     <Compile Include="LaTeXXpsConversionSimplest\LaTeXXpsConversionSimplest.cs" />

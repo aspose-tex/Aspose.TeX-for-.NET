@@ -1,4 +1,5 @@
-﻿using Aspose.TeX.Examples.CSharp.TeXTypesetting;
+﻿using Aspose.TeX.Examples.CSharp.LaTeXMathRendering;
+using Aspose.TeX.Examples.CSharp.TeXTypesetting;
 using System;
 using System.IO;
 
@@ -56,8 +57,12 @@ namespace Aspose.TeX.Examples.CSharp
             //LaTeXPdfConversionSimplest.Run();
             //LaTeXPdfConversionAlternative.Run();
 
-            LaTeXXpsConversionSimplest.Run();
+            //LaTeXXpsConversionSimplest.Run();
             //LaTeXXpsConversionAlternative.Run();
+
+            // ======================================
+
+            LaTeXMathRenderer.Run();
         }
     }
 }
