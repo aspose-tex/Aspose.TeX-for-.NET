@@ -32,9 +32,9 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXMathRendering
             using (Stream stream = System.IO.File.Open(
                 Path.Combine(RunExamples.OutputDirectory, "math-formula.png"), FileMode.Create))
                 // Run rendering.
-                MathRenderer.Render(@"\begin{equation}
+                MathRenderer.Render(@"\begin{equation*}
 e^x = x^{\color{red}0} + x^{\color{red}1} + \frac{x^{\color{red}2}}{2} + \frac{x^{\color{red}3}}{6} + \cdots = \sum_{n\geq 0} \frac{x^{\color{red}n}}{n!}
-\end{equation}", stream, options, out size);
+\end{equation*}", stream, options, out size);
 
             // Show other results.
             System.Console.Out.WriteLine(options.ErrorReport);

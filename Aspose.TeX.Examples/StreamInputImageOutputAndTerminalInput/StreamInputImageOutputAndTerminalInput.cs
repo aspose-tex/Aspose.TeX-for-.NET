@@ -24,7 +24,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
             // Specify the console as the input terminal.
             options.TerminalIn = new InputConsoleTerminal();  // Default. No need to specify.
-            // Specify the console as the input terminal.
+            // Specify the console as the output terminal.
             options.TerminalOut = new OutputConsoleTerminal(); // Default. No need to specify.
 
             // Define the saving options.

@@ -21,7 +21,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             options.TerminalOut = new OutputConsoleTerminal(); // Default. No need to specify.
             // Specify a memory stream as output terminal, if you don't want the terminal output to be written to the console.
             //options.TerminalOut = new OutputMemoryTerminal();
-            // Run typesetting.
+            // Run the job.
             TeXJob job = new TeXJob("hello-world", new XpsDevice(), options);
             job.Run();
 

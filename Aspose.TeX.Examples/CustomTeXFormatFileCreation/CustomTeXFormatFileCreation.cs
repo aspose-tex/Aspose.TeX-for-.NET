@@ -10,7 +10,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:CreateCustomTeXFormatFile
-            // Create typesetting options for no format on ObjectTeX engine extension.
+            // Create TeX engine options for no format on ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectIniTeX);
             // Specify a file system working directory for the input.
             options.InputWorkingDirectory = new InputFileSystemDirectory(RunExamples.InputDirectory);

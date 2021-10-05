@@ -26,7 +26,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
 
             // Open the stream to write typeset XPS document. The file name is not necessarily the same as the job name.
             using (Stream stream = File.Open(Path.Combine(RunExamples.OutputDirectory, options.JobName + ".xps"), FileMode.Create))
-                // Run typesetting.
+                // Run the job.
                 new TeXJob("hello-world", new XpsDevice(stream), options).Run();
             // ExEnd:WriteOutputXpsToExternalStream
         }
