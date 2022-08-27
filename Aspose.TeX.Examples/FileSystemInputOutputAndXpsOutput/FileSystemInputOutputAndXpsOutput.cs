@@ -11,21 +11,21 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:TakeInputFromFileSystem-WriteOutputToFileSystem-WriteTerminalOutputToConsole
-            // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
+            // Create conversion options for default ObjectTeX format upon ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
             // Specify a file system working directory for the input.
             options.InputWorkingDirectory = new InputFileSystemDirectory(RunExamples.InputDirectory);
             // Specify a file system working directory for the output.
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
-            // Specify console as output terminal.
-            options.TerminalOut = new OutputConsoleTerminal(); // Default. No need to specify.
-            // Specify a memory stream as output terminal, if you don't want the terminal output to be written to the console.
-            //options.TerminalOut = new OutputMemoryTerminal();
+            // Specify the console as the output terminal.
+            options.TerminalOut = new OutputConsoleTerminal(); // Default value. Arbitrary assignment.
+            // Specify a memory terminal as output terminal, if you don't want the terminal output to be written to the console.
+            // options.TerminalOut = new OutputMemoryTerminal();
             // Run the job.
             TeXJob job = new TeXJob("hello-world", new XpsDevice(), options);
             job.Run();
 
-            // For further output to look write.
+            // For further output to look fine.
             options.TerminalOut.Writer.WriteLine(); // The same as Console.Out.WriteLine();
             // ExEnd:TakeInputFromFileSystem-WriteOutputToFileSystem-WriteTerminalOutputToConsole
         }

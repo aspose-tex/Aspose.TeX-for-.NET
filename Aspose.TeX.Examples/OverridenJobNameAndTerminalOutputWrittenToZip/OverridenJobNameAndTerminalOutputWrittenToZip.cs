@@ -17,11 +17,11 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Open a stream on a ZIP archive that will serve as the output working directory.
             using (Stream outZipStream = File.Open(Path.Combine(RunExamples.OutputDirectory, "terminal-out-to-zip.zip"), FileMode.Create))
             {
-                // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
+                // Create conversion options for default ObjectTeX format upon ObjectTeX engine extension.
                 TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
-                // Specify the job name.
+                // Specify a job name.
                 options.JobName = "terminal-output-to-zip";
-                // Specify a ZIP archive working directory for the input.
+                // Specify a ZIP archive working directory for the input. You can also specify a path inside the archive.
                 options.InputWorkingDirectory = new InputZipDirectory(inZipStream, "in");
                 // Specify a ZIP archive working directory for the output.
                 options.OutputWorkingDirectory = new OutputZipDirectory(outZipStream);

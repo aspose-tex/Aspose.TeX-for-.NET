@@ -1,0 +1,23 @@
+\documentclass{article}
+\usepackage{graphicx}
+\title{A ``Hello World'' Document}  % Declares the document's title.
+\author{Mister Somebody}      % Declares the author's name.
+\begin{document}
+\maketitle  
+Hello, World!
+
+Notice ligatures with the \texttt{NoLigatures} option set to \texttt{true}: ffi fi ti.
+
+This is an inline math formula: $\int_a^b f(x)\,dx$.
+And now a displayed formula: $$\int_a^b f(x)\,dx$$
+Notice these formulas with the \texttt{RasterizeFormulas} option set to \texttt{true}.
+
+And now it's time for a XPS file included as graphics.
+
+\message{Including XPS and PS (without bounding box specified) files is a kinda experimental feature. You will receive an error message stating that the bounding box of graphic couldn't be determined. Just press <Enter> at the terminal prompt, or set an appropriate interaction mode in the TeX job options (e.g. NonstopMode).}
+
+\includegraphics[angle=-60,height=40mm]{sample.xps}
+
+Notice it with the \texttt{RasterizeIncludedGraphics} option set to \texttt{true}.
+
+\end{document}

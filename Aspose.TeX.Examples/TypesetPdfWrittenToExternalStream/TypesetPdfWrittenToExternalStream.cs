@@ -17,11 +17,11 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Open a stream on a ZIP archive that will serve as the output working directory.
             using (Stream outZipStream = File.Open(Path.Combine(RunExamples.OutputDirectory, "typeset-pdf-to-external-stream.zip"), FileMode.Create))
             {
-                // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
+                // Create conversion options for default ObjectTeX format upon ObjectTeX engine extension.
                 TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
-                // Specify the job name.
+                // Specify a job name.
                 options.JobName = "typeset-pdf-to-external-stream"; // does NOT define the name of the output PDF.
-                // Specify a ZIP archive working directory for the input.
+                // Specify a ZIP archive working directory for the input. You can also specify a path inside the archive.
                 options.InputWorkingDirectory = new InputZipDirectory(inZipStream, "in");
                 // Specify a ZIP archive working directory for the output.
                 options.OutputWorkingDirectory = new OutputZipDirectory(outZipStream);
@@ -34,7 +34,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
                 // Open a stream to write the output PDF to.
                 // 1) A file somewhere on a local file system.
                 using (Stream stream = File.Open(Path.Combine(RunExamples.OutputDirectory, "file-name.pdf"), FileMode.Create)) // writing PDF somewhere else
-                // 2) A file in the output ZIP. A wierd feature that extends flexibilty :)
+                // 2) A file in the output ZIP. A weird feature that extends flexibilty :)
                 //using (Stream stream = options.OutputWorkingDirectory.GetFile("file-name.pdf", out string fullName)) // writing PDF to the same ZIP
                     new TeXJob("hello-world", new PdfDevice(stream), options).Run();
 

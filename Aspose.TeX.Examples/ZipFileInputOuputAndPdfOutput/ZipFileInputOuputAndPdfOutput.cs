@@ -17,14 +17,14 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Open the stream on the ZIP archive that will serve as the output working directory.
             using (Stream outZipStream = File.Open(Path.Combine(RunExamples.OutputDirectory, "zip-pdf-out.zip"), FileMode.Create))
             {
-                // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
+                // Create conversion options for default ObjectTeX format upon ObjectTeX engine extension.
                 TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
-                // Specify a ZIP archive working directory for the input.
+                // Specify a ZIP archive working directory for the input. You can also specify a path inside the archive.
                 options.InputWorkingDirectory = new InputZipDirectory(inZipStream, "in");
                 // Specify a ZIP archive working directory for the output.
                 options.OutputWorkingDirectory = new OutputZipDirectory(outZipStream);
                 // Specify the console as the output terminal.
-                options.TerminalOut = new OutputConsoleTerminal(); // Default. Not necessary to specify.
+                options.TerminalOut = new OutputConsoleTerminal(); // Default value. Arbitrary assignment.
 
                 // Define the saving options.
                 options.SaveOptions = new PdfSaveOptions();
@@ -32,7 +32,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
                 TeXJob job = new TeXJob("hello-world", new PdfDevice(), options);
                 job.Run();
 
-                // For consequent output to look write. 
+                // For further output to look fine. 
                 options.TerminalOut.Writer.WriteLine();
 
                 // Finalize output ZIP archive.

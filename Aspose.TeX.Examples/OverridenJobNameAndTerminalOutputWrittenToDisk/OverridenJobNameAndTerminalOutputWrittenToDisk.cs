@@ -11,9 +11,9 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:OverrideJobName-WriteTerminalOutputToFileSystem
-            // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
+            // Create conversion options for default ObjectTeX format upon ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
-            // Specify the job name. Otherwise, TeX.Typeset()'s method first argument will be taken as a job name.
+            // Specify a job name. Otherwise, the first argument of the TeXJob constructor will be taken as a job name.
             options.JobName = "overriden-job-name";
             // Specify a file system working directory for the input.
             options.InputWorkingDirectory = new InputFileSystemDirectory(RunExamples.InputDirectory);

@@ -57,12 +57,16 @@ namespace Aspose.TeX.Examples.CSharp
             //LaTeXPdfConversionSimplest.Run();
             //LaTeXPdfConversionAlternative.Run();
 
-            //LaTeXXpsConversionSimplest.Run();
+            LaTeXXpsConversionSimplest.Run();
             //LaTeXXpsConversionAlternative.Run();
+
+            //LaTeXSvgConversionSimplest.Run();
 
             // ======================================
 
-            LaTeXMathRenderer.Run();
+            //PngLaTeXMathRenderer.Run();
+
+            //SvgLaTeXMathRenderer.Run();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:WriteOutputXpsToExternalStream
-            // Create conversion options for default ObjectTeX format on ObjectTeX engine extension.
+            // Create conversion options for default ObjectTeX format upon ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
             // Specify a job name.
             options.JobName = "external-file-stream";

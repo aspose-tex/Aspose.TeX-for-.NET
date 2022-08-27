@@ -9,12 +9,12 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
         public static void Run()
         {
             // ExStart:Conversion-LaTeXToPng-Alternative
-            // Create conversion options for Object LaTeX format on Object TeX engine extension.
+            // Create conversion options for Object LaTeX format upon Object TeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectLaTeX);
-            // Specify the file system working directory for the output.
+            // Specify a file system working directory for the output.
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
             // Initialize the options for saving in PNG format.
-            options.SaveOptions = new PngSaveOptions();
+            options.SaveOptions = new PngSaveOptions() { DeviceWritesImages = false };
             // Run LaTeX to PNG conversion.
             ImageDevice device = new ImageDevice();
             new TeXJob(Path.Combine(RunExamples.InputDirectory, "hello-world.ltx"), device, options).Run();
