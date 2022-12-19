@@ -57,10 +57,14 @@ namespace Aspose.TeX.Examples.CSharp
             //LaTeXPdfConversionSimplest.Run();
             //LaTeXPdfConversionAlternative.Run();
 
-            LaTeXXpsConversionSimplest.Run();
+            //LaTeXXpsConversionSimplest.Run();
             //LaTeXXpsConversionAlternative.Run();
 
             //LaTeXSvgConversionSimplest.Run();
+
+            //LaTeXRequiredInputFs.Run();
+
+            LaTeXRequiredInputZip.Run();
 
             // ======================================
 

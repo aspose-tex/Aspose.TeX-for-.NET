@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage[a6paper,landscape]{geometry}
+\usepackage{fancybox}
+\begin{document}
+Test: \fbox{
+  \begin{Bitemize}[b]
+  \item First item
+  \item A second one\\ on two lines
+  \item(2pt) A third with extra space
+  \end{Bitemize}
+}
+\par\bigskip
+Test: \fbox{
+  \begin{Beqnarray}[t]
+  y & = & x^2 \\
+  a^2 + 2ab + b^2 & = & (a + b)^2 \\
+  \int_0^\infty e^{-ax} dx & = & \frac{1}{a}
+  \end{Beqnarray}
+}
+\end{document}

@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaTeXRequiredInputZip\LaTeXRequiredInputZip.cs" />
     <Compile Include="LaTeXSvgConversionSimplest\LaTeXSvgConversionSimplest.cs" />
+    <Compile Include="LaTeXRequiredInputFs\LaTeXRequiredInputFs.cs" />
     <Compile Include="PngLaTeXMathRenderer\PngLaTeXMathRenderer.cs" />
     <Compile Include="LaTeXXpsConversionAlternative\LaTeXXpsConversionAlternative.cs" />
     <Compile Include="LaTeXPdfConversionAlternative\LaTeXPdfConversionAlternative.cs" />
