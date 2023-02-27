@@ -50,6 +50,7 @@
     <Compile Include="LaTeXRequiredInputZip\LaTeXRequiredInputZip.cs" />
     <Compile Include="LaTeXSvgConversionSimplest\LaTeXSvgConversionSimplest.cs" />
     <Compile Include="LaTeXRequiredInputFs\LaTeXRequiredInputFs.cs" />
+    <Compile Include="PngLaTeXFigureRenderer\PngLaTeXFigureRenderer.cs" />
     <Compile Include="PngLaTeXMathRenderer\PngLaTeXMathRenderer.cs" />
     <Compile Include="LaTeXXpsConversionAlternative\LaTeXXpsConversionAlternative.cs" />
     <Compile Include="LaTeXPdfConversionAlternative\LaTeXPdfConversionAlternative.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="LoadLicenseFromStream\LoadLicenseFromStream.cs" />
     <Compile Include="OverridenJobNameAndTerminalOutputWrittenToZip\OverridenJobNameAndTerminalOutputWrittenToZip.cs" />
     <Compile Include="StreamInputImageOutputAndTerminalInput\StreamInputImageOutputAndTerminalInput.cs" />
+    <Compile Include="SvgLaTeXFigureRenderer\SvgLaTeXFigureRenderer.cs" />
     <Compile Include="SvgLaTeXMathRenderer\SvgLaTeXMathRenderer.cs" />
     <Compile Include="TypesetPdfWrittenToExternalStream\TypesetPdfWrittenToExternalStream.cs" />
     <Compile Include="TypesetWithCustomTeXFormat\TypesetWithCustomTeXFormat.cs" />

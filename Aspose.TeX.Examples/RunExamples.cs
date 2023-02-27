@@ -1,4 +1,5 @@
-﻿using Aspose.TeX.Examples.CSharp.LaTeXMathRendering;
+﻿using Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer;
+using Aspose.TeX.Examples.CSharp.LaTeXMathRendering;
 using Aspose.TeX.Examples.CSharp.TeXTypesetting;
 using System;
 using System.IO;
@@ -64,13 +65,19 @@ namespace Aspose.TeX.Examples.CSharp
 
             //LaTeXRequiredInputFs.Run();
 
-            LaTeXRequiredInputZip.Run();
+            //LaTeXRequiredInputZip.Run();
 
             // ======================================
 
             //PngLaTeXMathRenderer.Run();
 
             //SvgLaTeXMathRenderer.Run();
+
+            // ======================================
+
+            PngLaTeXFigureRenderer.Run();
+
+            //SvgLaTeXFigureRenderer.Run();
         }
     }
 }

@@ -1,23 +1,18 @@
 ﻿using Aspose.TeX.Features;
 
-namespace Aspose.TeX.Examples.CSharp.LaTeXMathRendering
+namespace Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer
 {
-    class PngLaTeXMathRenderer
+    class SvgLaTeXFigureRenderer
     {
         public static void Run()
         {
-            // ExStart:PngLaTeXMathRendering
-            // Create rendering options setting the image resolution to 150 dpi.
-            MathRendererOptions options = new PngMathRendererOptions() { Resolution = 150 };
+            // ExStart:SvgLaTeXFigureRenderer
+            // Create rendering options.
+            FigureRendererOptions options = new SvgFigureRendererOptions();
             // Specify the preamble.
-            options.Preamble = @"\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{color}";
+            options.Preamble = "\\usepackage{pict2e}";
             // Specify the scaling factor 300%.
             options.Scale = 3000;
-            // Specify the foreground color.
-            options.TextColor = System.Drawing.Color.Black;
             // Specify the background color.
             options.BackgroundColor = System.Drawing.Color.White;
             // Specify the output stream for the log file.
@@ -27,21 +22,24 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXMathRendering
 
             // The variable in which the dimensions of the resulting image will be written.
             System.Drawing.SizeF size = new System.Drawing.SizeF();
-            // Create the output stream for the formula image.
+            // Create the output stream for the figure image.
             using (System.IO.Stream stream = System.IO.File.Open(
-                System.IO.Path.Combine(RunExamples.OutputDirectory, "math-formula.png"), System.IO.FileMode.Create))
+               System.IO.Path.Combine(RunExamples.OutputDirectory, "text-and-formula.svg"), System.IO.FileMode.Create))
             {
                 // Run rendering.
-                new PngMathRenderer().Render(@"\begin{equation*}
-e^x = x^{\color{red}0} + x^{\color{red}1} + \frac{x^{\color{red}2}}{2} + \frac{x^{\color{red}3}}{6} + \cdots = \sum_{n\geq 0} \frac{x^{\color{red}n}}{n!}
-\end{equation*}", stream, options, out size);
+                new SvgFigureRenderer().Render(@"\setlength{\unitlength}{0.8cm}
+\begin{picture}(6,5)
+\thicklines
+\put(1,0.5){\line(2,1){3}} \put(4,2){\line(-2,1){2}} \put(2,3){\line(-2,-5){1}} \put(0.7,0.3){$A$} \put(4.05,1.9){$B$} \put(1.7,2.95){$C$}
+\put(3.1,2.5){$a$} \put(1.3,1.7){$b$} \put(2.5,1.05){$c$} \put(0.3,4){$F=\sqrt{s(s-a)(s-b)(s-c)}$} \put(3.5,0.4){$\displaystyle s:=\frac{a+b+c}{2}$}
+\end{picture}", stream, options, out size);
             }
 
             // Show other results.
             System.Console.Out.WriteLine(options.ErrorReport);
             System.Console.Out.WriteLine();
             System.Console.Out.WriteLine("Size: " + size);
-            // ExEnd:PngLaTeXMathRendering
+            // ExEnd:PngLaTeXFigureRenderer
         }
     }
 }
