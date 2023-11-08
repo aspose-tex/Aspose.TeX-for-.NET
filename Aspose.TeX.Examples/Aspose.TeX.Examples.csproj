@@ -62,6 +62,7 @@
     <Compile Include="LoadLicenseFromFile\LoadLicenseFromFile.cs" />
     <Compile Include="LoadLicenseFromStream\LoadLicenseFromStream.cs" />
     <Compile Include="OverridenJobNameAndTerminalOutputWrittenToZip\OverridenJobNameAndTerminalOutputWrittenToZip.cs" />
+    <Compile Include="SetMeteredLicense\SetMeteredLicense.cs" />
     <Compile Include="StreamInputImageOutputAndTerminalInput\StreamInputImageOutputAndTerminalInput.cs" />
     <Compile Include="SvgLaTeXFigureRenderer\SvgLaTeXFigureRenderer.cs" />
     <Compile Include="SvgLaTeXMathRenderer\SvgLaTeXMathRenderer.cs" />

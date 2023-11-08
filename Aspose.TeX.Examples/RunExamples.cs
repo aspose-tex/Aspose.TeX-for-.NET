@@ -32,6 +32,8 @@ namespace Aspose.TeX.Examples.CSharp
 
             //LoadLicenseFromStream.Run();
 
+            //SetMeteredLicense.Run();
+
             //FileSystemInputOutputAndXpsOutput.Run();
 
             //OverridenJobNameAndTerminalOutputWrittenToDisk.Run();
