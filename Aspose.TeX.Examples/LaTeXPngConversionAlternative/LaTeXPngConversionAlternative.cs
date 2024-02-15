@@ -14,15 +14,18 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Specify a file system working directory for the output.
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
             // Initialize the options for saving in PNG format.
-            options.SaveOptions = new PngSaveOptions() { DeviceWritesImages = false };
-            // Run LaTeX to PNG conversion.
+            PngSaveOptions pngSaveOptions = new PngSaveOptions();
+            pngSaveOptions.DeviceWritesImages = false;
+            options.SaveOptions = pngSaveOptions;
+            // Create the image device.
             ImageDevice device = new ImageDevice();
+            // Run LaTeX to PNG conversion.
             new TeXJob(Path.Combine(RunExamples.InputDirectory, "hello-world.ltx"), device, options).Run();
 
             // Save pages file by file.
             for (int i = 0; i < device.Result.Length; i++)
             {
-                using (Stream fs = File.Open(Path.Combine(RunExamples.OutputDirectory, "page-" + (i + 1) + ".png"), FileMode.Create))
+                using (Stream fs = File.Open(Path.Combine(RunExamples.OutputDirectory, $"page-{i + 1}.png"), FileMode.Create))
                     fs.Write(device.Result[i], 0, device.Result[i].Length);
             }
             // ExEnd:Conversion-LaTeXToPng-Alternative

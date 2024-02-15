@@ -6,7 +6,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
     /// <summary>
     /// Using file system directories for input and output, outputting to XPS device, overriding the job name, writing terminal output to disk.
     /// </summary>
-    class OverridenJobNameAndTerminalOutputWrittenToDisk
+    class OverriddenJobNameAndTerminalOutputWrittenToDisk
     {
         public static void Run()
         {
@@ -14,7 +14,7 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             // Create conversion options for default ObjectTeX format upon ObjectTeX engine extension.
             TeXOptions options = TeXOptions.ConsoleAppOptions(TeXConfig.ObjectTeX());
             // Specify a job name. Otherwise, the first argument of the TeXJob constructor will be taken as a job name.
-            options.JobName = "overriden-job-name";
+            options.JobName = "overridden-job-name";
             // Specify a file system working directory for the input.
             options.InputWorkingDirectory = new InputFileSystemDirectory(RunExamples.InputDirectory);
             // Specify a file system working directory for the output.

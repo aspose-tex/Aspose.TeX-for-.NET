@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Aspose.TeX.Examples.RequiredInputDirectory
 {
-    // ExStart:RequiredInputDirectory
+    // ExStart:Conversion-RequiredInputDirectory
     // This is an implementation of IInputWorkingDirectory that is suitable for the TeX job's RequiredInputDirectory option
     // in case required input contains fonts provided by external packages.
     // The class additionally implements IFileCollector, which provides access to file collections by extension.
@@ -36,10 +36,9 @@ namespace Aspose.TeX.Examples.RequiredInputDirectory
         }
 
         // The IInputWorkingDirectory implementation.
-        public Stream GetFile(string fileName, out string fullName, bool searchSubdirectories = false)
+        public NamedStream GetFile(string fileName, bool searchSubdirectories = false)
         {
-            fullName = fileName;
-            return null; // Here we actually return a stream for the file requested by its name.
+            return new NamedStream(null, fileName); // Here we actually return a stream for the file requested by its name.
         }
 
         // Here is how we gather file collections by extension.
@@ -57,5 +56,5 @@ namespace Aspose.TeX.Examples.RequiredInputDirectory
             _fileNames.Clear();
         }
     }
-    // ExEnd:RequiredInputDirectory
+    // ExEnd:Conversion-RequiredInputDirectory
 }

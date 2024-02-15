@@ -28,7 +28,9 @@ namespace Aspose.TeX.Examples.CSharp.TeXTypesetting
             options.TerminalOut = new OutputConsoleTerminal(); // Default value. Arbitrary assignment.
 
             // Define the saving options.
-            options.SaveOptions = new PngSaveOptions() { Resolution = 300 };
+            PngSaveOptions pngSaveOptions = new PngSaveOptions();
+            pngSaveOptions.Resolution = 300;
+            options.SaveOptions = pngSaveOptions;
             // Create the image device.
             ImageDevice device = new ImageDevice();
             // Run the job.

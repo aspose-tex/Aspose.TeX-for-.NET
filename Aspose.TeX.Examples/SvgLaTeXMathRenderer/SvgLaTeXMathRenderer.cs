@@ -6,7 +6,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXMathRendering
     {
         public static void Run()
         {
-            // ExStart:SvgLaTeXMathRendering
+            // ExStart:Features-SvgLaTeXMathRendering
             // Create rendering options.
             MathRendererOptions options = new SvgMathRendererOptions();
             // Specify the preamble.
@@ -25,23 +25,21 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXMathRendering
             // Specify whether to show the terminal output on the console or not.
             options.ShowTerminal = true;
 
-            // The variable in which the dimensions of the resulting image will be written.
-            System.Drawing.SizeF size = new System.Drawing.SizeF();
             // Create the output stream for the formula image.
             using (System.IO.Stream stream = System.IO.File.Open(
                 System.IO.Path.Combine(RunExamples.OutputDirectory, "math-formula.svg"), System.IO.FileMode.Create))
             {
                 // Run rendering.
-                new SvgMathRenderer().Render(@"\begin{equation*}
+                System.Drawing.SizeF size = new SvgMathRenderer().Render(@"\begin{equation*}
 e^x = x^{\color{red}0} + x^{\color{red}1} + \frac{x^{\color{red}2}}{2} + \frac{x^{\color{red}3}}{6} + \cdots = \sum_{n\geq 0} \frac{x^{\color{red}n}}{n!}
-\end{equation*}", stream, options, out size);
-            }
+\end{equation*}", stream, options);
 
-            // Show other results.
-            System.Console.Out.WriteLine(options.ErrorReport);
-            System.Console.Out.WriteLine();
-            System.Console.Out.WriteLine("Size: " + size);
-            // ExEnd:SvgLaTeXMathRenderering
+                // Show other results.
+                System.Console.Out.WriteLine(options.ErrorReport);
+                System.Console.Out.WriteLine();
+                System.Console.Out.WriteLine($"Size: {size}"); // Dimensions of the resulting image.
+            }
+            // ExEnd:Features-SvgLaTeXMathRenderering
         }
     }
 }

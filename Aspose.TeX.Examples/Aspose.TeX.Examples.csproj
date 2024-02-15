@@ -61,7 +61,7 @@
     <Compile Include="CustomTeXFormatFileCreation\CustomTeXFormatFileCreation.cs" />
     <Compile Include="LoadLicenseFromFile\LoadLicenseFromFile.cs" />
     <Compile Include="LoadLicenseFromStream\LoadLicenseFromStream.cs" />
-    <Compile Include="OverridenJobNameAndTerminalOutputWrittenToZip\OverridenJobNameAndTerminalOutputWrittenToZip.cs" />
+    <Compile Include="OverriddenJobNameAndTerminalOutputWrittenToZip\OverriddenJobNameAndTerminalOutputWrittenToZip.cs" />
     <Compile Include="RequiredInputDirectory\RequiredInputDirectory.cs" />
     <Compile Include="SetMeteredLicense\SetMeteredLicense.cs" />
     <Compile Include="StreamInputImageOutputAndTerminalInput\StreamInputImageOutputAndTerminalInput.cs" />
@@ -71,10 +71,10 @@
     <Compile Include="TypesetWithCustomTeXFormat\TypesetWithCustomTeXFormat.cs" />
     <Compile Include="TypesetXpsWrittenToExternalStream\TypesetXpsWrittenToExternalStream.cs" />
     <Compile Include="FileSystemInputOutputAndXpsOutput\FileSystemInputOutputAndXpsOutput.cs" />
-    <Compile Include="OverridenJobNameAndTerminalOutputWrittenToDisk\OverridenJobNameAndTerminalOutputWrittenToDisk.cs" />
+    <Compile Include="OverriddenJobNameAndTerminalOutputWrittenToDisk\OverriddenJobNameAndTerminalOutputWrittenToDisk.cs" />
     <Compile Include="RunExamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ZipFileInputOuputAndPdfOutput\ZipFileInputOuputAndPdfOutput.cs" />
+    <Compile Include="ZipFileInputOutputAndPdfOutput\ZipFileInputOutputAndPdfOutput.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

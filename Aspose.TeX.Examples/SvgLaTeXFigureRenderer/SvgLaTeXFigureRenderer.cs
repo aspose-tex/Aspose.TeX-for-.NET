@@ -6,7 +6,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer
     {
         public static void Run()
         {
-            // ExStart:SvgLaTeXFigureRenderer
+            // ExStart:Features-SvgLaTeXFigureRendering
             // Create rendering options.
             FigureRendererOptions options = new SvgFigureRendererOptions();
             // Specify the preamble.
@@ -20,26 +20,24 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer
             // Specify whether to show the terminal output on the console or not.
             options.ShowTerminal = true;
 
-            // The variable in which the dimensions of the resulting image will be written.
-            System.Drawing.SizeF size = new System.Drawing.SizeF();
             // Create the output stream for the figure image.
             using (System.IO.Stream stream = System.IO.File.Open(
                System.IO.Path.Combine(RunExamples.OutputDirectory, "text-and-formula.svg"), System.IO.FileMode.Create))
             {
                 // Run rendering.
-                new SvgFigureRenderer().Render(@"\setlength{\unitlength}{0.8cm}
+                System.Drawing.SizeF size = new SvgFigureRenderer().Render(@"\setlength{\unitlength}{0.8cm}
 \begin{picture}(6,5)
 \thicklines
 \put(1,0.5){\line(2,1){3}} \put(4,2){\line(-2,1){2}} \put(2,3){\line(-2,-5){1}} \put(0.7,0.3){$A$} \put(4.05,1.9){$B$} \put(1.7,2.95){$C$}
 \put(3.1,2.5){$a$} \put(1.3,1.7){$b$} \put(2.5,1.05){$c$} \put(0.3,4){$F=\sqrt{s(s-a)(s-b)(s-c)}$} \put(3.5,0.4){$\displaystyle s:=\frac{a+b+c}{2}$}
-\end{picture}", stream, options, out size);
-            }
+\end{picture}", stream, options);
 
-            // Show other results.
-            System.Console.Out.WriteLine(options.ErrorReport);
-            System.Console.Out.WriteLine();
-            System.Console.Out.WriteLine("Size: " + size);
-            // ExEnd:PngLaTeXFigureRenderer
+                // Show other results.
+                System.Console.Out.WriteLine(options.ErrorReport);
+                System.Console.Out.WriteLine();
+                System.Console.Out.WriteLine($"Size: {size}"); // Dimensions of the resulting image.
+            }
+            // ExEnd:Features-PngLaTeXFigureRendering
         }
     }
 }

@@ -34,15 +34,15 @@ namespace Aspose.TeX.Examples.CSharp
 
             //SetMeteredLicense.Run();
 
-            //FileSystemInputOutputAndXpsOutput.Run();
+            FileSystemInputOutputAndXpsOutput.Run();
 
-            //OverridenJobNameAndTerminalOutputWrittenToDisk.Run();
+            //OverriddenJobNameAndTerminalOutputWrittenToDisk.Run();
 
             //TypesetXpsWrittenToExternalStream.Run();
 
-            //ZipFileInputOuputAndPdfOutput.Run();
+            //ZipFileInputOutputAndPdfOutput.Run();
 
-            //OverridenJobNameAndTerminalOutputWrittenToZip.Run();
+            //OverriddenJobNameAndTerminalOutputWrittenToZip.Run();
 
             //TypesetPdfWrittenToExternalStream.Run();
 
@@ -77,7 +77,7 @@ namespace Aspose.TeX.Examples.CSharp
 
             // ======================================
 
-            PngLaTeXFigureRenderer.Run();
+            //PngLaTeXFigureRenderer.Run();
 
             //SvgLaTeXFigureRenderer.Run();
         }
