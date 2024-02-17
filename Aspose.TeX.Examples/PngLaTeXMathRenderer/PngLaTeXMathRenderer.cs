@@ -9,7 +9,6 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXMathRendering
             // ExStart:Features-PngLaTeXMathRendering
             // Create rendering options setting the image resolution to 150 dpi.
             PngMathRendererOptions options = new PngMathRendererOptions();
-            // Specify the resolution.
             options.Resolution = 150;
             // Specify the preamble.
             options.Preamble = @"\usepackage{amsmath}

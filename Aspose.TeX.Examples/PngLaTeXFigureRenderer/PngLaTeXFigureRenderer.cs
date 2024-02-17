@@ -9,7 +9,6 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer
             // ExStart:Features-PngLaTeXFigureRendering
             // Create rendering options setting the image resolution to 150 dpi.
             PngFigureRendererOptions options = new PngFigureRendererOptions();
-            // Specify the resolution.
             options.Resolution = 150;
             // Specify the preamble.
             options.Preamble = "\\usepackage{pict2e}";
