@@ -1,5 +1,6 @@
 ﻿using Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer;
 using Aspose.TeX.Examples.CSharp.LaTeXMathRendering;
+using Aspose.TeX.Examples.CSharp.LaTeXRepairer;
 using Aspose.TeX.Examples.CSharp.TeXTypesetting;
 using System;
 using System.IO;
@@ -34,7 +35,7 @@ namespace Aspose.TeX.Examples.CSharp
 
             //SetMeteredLicense.Run();
 
-            FileSystemInputOutputAndXpsOutput.Run();
+            //FileSystemInputOutputAndXpsOutput.Run();
 
             //OverriddenJobNameAndTerminalOutputWrittenToDisk.Run();
 
@@ -80,6 +81,10 @@ namespace Aspose.TeX.Examples.CSharp
             //PngLaTeXFigureRenderer.Run();
 
             //SvgLaTeXFigureRenderer.Run();
+
+            // ======================================
+
+            LaTeXRepairerExample.Run();
         }
     }
 }
