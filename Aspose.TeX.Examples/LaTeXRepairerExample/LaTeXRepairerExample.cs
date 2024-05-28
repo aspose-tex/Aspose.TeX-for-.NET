@@ -24,7 +24,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXRepairer
             // ExEnd:Features-LaTeXRepairer
         }
 
-        // ExStart:Features-LaTeXRepairer-PackageGueassingCallback
+        // ExStart:Features-LaTeXRepairer-PackageGuessingCallback
         // The callback class to externally guess packages required for undefined commands or environments.
         public class PackageGuesser : IGuessPackageCallback
         {
@@ -49,7 +49,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXRepairer
 
                 return "";
             }
-            // ExEnd:Features-LaTeXRepairer-PackageGueassingCallback
+            // ExEnd:Features-LaTeXRepairer-PackageGuessingCallback
         }
     }
 }
