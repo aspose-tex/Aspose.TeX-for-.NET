@@ -10,7 +10,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXRepairer
         public static void Run()
         {
             // ExStart:Features-LaTeXRepairer
-            // Create conversion options for Object LaTeX format upon Object TeX engine extension.
+            // Create repair options.
             LaTeXRepairerOptions options = new LaTeXRepairerOptions();
             // Specify a file system working directory for the output.
             options.OutputWorkingDirectory = new OutputFileSystemDirectory(RunExamples.OutputDirectory);
@@ -19,7 +19,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXRepairer
             options.RequiredInputDirectory = new InputFileSystemDirectory(Path.Combine(RunExamples.InputDirectory, "packages"));
             // Specify the callback class to externally guess packages required for undefined commands or environments.
             options.GuessPackageCallback = new PackageGuesser();
-            // Run LaTeX to PNG conversion.
+            // Run the repair process.
             new Features.LaTeXRepairer(Path.Combine(RunExamples.InputDirectory, "invalid-latex.tex"), options).Run();
             // ExEnd:Features-LaTeXRepairer
         }
@@ -49,7 +49,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXRepairer
 
                 return "";
             }
-            // ExEnd:Features-LaTeXRepairer-PackageGuessingCallback
         }
+        // ExEnd:Features-LaTeXRepairer-PackageGuessingCallback
     }
 }
