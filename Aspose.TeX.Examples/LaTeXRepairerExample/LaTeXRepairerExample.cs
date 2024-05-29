@@ -41,7 +41,7 @@ namespace Aspose.TeX.Examples.CSharp.LaTeXRepairer
                 if (!isEnvironment)
                 {
                     _map.TryGetValue(commandName, out packageName);
-                    return packageName ?? ""; // It's better to return an empty stream to avoid consequent calls for the same command name.
+                    return packageName ?? ""; // It's better to return an empty string to avoid consequent calls for the same command name.
                 }
 
                 // Some code for environments
