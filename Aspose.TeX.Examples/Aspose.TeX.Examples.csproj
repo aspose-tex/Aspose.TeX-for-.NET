@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LaTeXEmbeddedBase64EncodedImage\LaTeXEmbeddedBase64EncodedImage.cs" />
     <Compile Include="LaTeXRepairerExample\LaTeXRepairerExample.cs" />
     <Compile Include="LaTeXRequiredInputZip\LaTeXRequiredInputZip.cs" />
     <Compile Include="LaTeXSvgConversionSimplest\LaTeXSvgConversionSimplest.cs" />

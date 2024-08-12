@@ -1,4 +1,5 @@
-﻿using Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer;
+﻿using Aspose.TeX.Examples.CShar.LaTeXEmbeddedBase64EncodedImage;
+using Aspose.TeX.Examples.CSharp.LaTeXFigureRenderer;
 using Aspose.TeX.Examples.CSharp.LaTeXMathRendering;
 using Aspose.TeX.Examples.CSharp.LaTeXRepairer;
 using Aspose.TeX.Examples.CSharp.TeXTypesetting;
@@ -70,6 +71,8 @@ namespace Aspose.TeX.Examples.CSharp
 
             //LaTeXRequiredInputZip.Run();
 
+            LaTeXEmbeddedBase64EncodedImage.Run();
+
             // ======================================
 
             //PngLaTeXMathRenderer.Run();
@@ -84,7 +87,7 @@ namespace Aspose.TeX.Examples.CSharp
 
             // ======================================
 
-            LaTeXRepairerExample.Run();
+            //LaTeXRepairerExample.Run();
         }
     }
 }
